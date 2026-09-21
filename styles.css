@@ -32,6 +32,7 @@ body {
 .about-me-quote-and-navis {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     text-align: right;
     gap: 10px;
 }
@@ -49,3 +50,46 @@ body {
     text-align: right;
     gap: 10px;
 }
+
+.coding-languages-desc-and-navis {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+}
+
+.coding-languages-logo {
+    height: 150px;
+}
+
+.coding-languages-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apps-desc {
+    display: flex;
+    text-align: right;
+    align-items: center;
+}
+
+.apps-logo {
+    height: 150px;
+}
+
+.apps-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: right;
+}
+
+.footer {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 10px;
+}
+
+/*https://www.w3.org/Style/Examples/007/fonts.en.html*/
