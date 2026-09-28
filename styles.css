@@ -1,4 +1,5 @@
 body {
+    background-image: url("images/main_background.png"); 
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,6 +14,12 @@ body {
     box-sizing: border-box;
 }
 
+.header, .about-me-quote-and-navis, .about-me-desc, .music-desc-and-navis, .coding-languages, .apps, .footer {
+    border: solid; 
+    border-radius: 32px; 
+    margin-bottom: 32px;
+}
+
 #page-header {
     text-align: center;
     margin-bottom: 40px;
@@ -20,6 +27,8 @@ body {
 
 #navis-image {
     height: 300px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 .image-and-desc {
@@ -42,6 +51,7 @@ body {
     align-items: center;
     text-align: left;
     gap: 10px;
+    padding-right: 30px;
 }
 
 .music-desc-and-navis {
