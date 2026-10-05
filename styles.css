@@ -7,6 +7,11 @@ body {
     min-height: 100vh;
 }
 
+#window {
+    position: relative;
+    z-index: 1;
+}
+
 .top-bar {
     display: flex;
     border-radius: 32px;
