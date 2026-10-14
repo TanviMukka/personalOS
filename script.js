@@ -1,19 +1,20 @@
+var welcomeScreen = document.querySelector("#window")
+var welcomeScreenOpen = document.querySelector("#welcome-open")
+var welcomeScreenClose = document.querySelector("#welcome-close")
+
 function time() {
     var time = new Date().toLocaleString();
     var timeText = document.querySelector("#top-bar-time");
     timeText.innerHTML = time;
 }
-setInterval(time, 1000);
 
-makeDraggable(document.getElementById("window"));
-
-function makeDraggable(element) {
+function makeDraggable(element, handle) {
     var initialX = 0;
     var initialY = 0;
     var currentX = 0;
     var currentY = 0;
 
-    element.onmousedown = function (e) {
+    handle.onmousedown = function (e) {
         e.preventDefault();
         initialX = e.clientX - currentX;
         initialY = e.clientY - currentY;
@@ -32,3 +33,26 @@ function makeDraggable(element) {
         document.onmouseup = null;
     }
 }
+
+function openWindow(element) {
+    element.style.display = ""
+}
+
+function closeWindow(element) {
+    element.style.display = "none"
+}
+
+setInterval(time, 1000);
+
+makeDraggable(
+    document.getElementById("window"), 
+    document.getElementById("window-bar")
+);
+
+welcomeScreenClose.addEventListener("click", function() {
+    closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+    openWindow(welcomeScreen);
+});

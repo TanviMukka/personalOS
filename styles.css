@@ -22,13 +22,23 @@ body {
     margin-bottom: 16px;
 }
 
-#top-bar-header {
-    margin-left: 16px; 
-    font-weight: 500; 
-    background-color: rgba(218, 177, 218, 0.125);
-    padding: 4px 12px; 
-    border-radius: 16px;
+.top-bar-header {
+    margin-left: 16px;
     flex: 1;
+}
+
+#welcome-open {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+#welcome-close {
+    cursor: pointer;
+    transition: transform 0.15s, filter 0.15s;
 }
 
 #top-bar-time {
@@ -64,6 +74,75 @@ body {
     background-color: white;
 }
 
+#window-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 29px 29px 0 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+#window-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.13) 0 10px, transparent 10px 20px),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.13) 0 10px, transparent 10px 20px);
+}
+
+#window-bar > * {
+    position: relative;
+    z-index: 1;
+}
+
+.window-bar-title {
+    margin: 0;
+    padding: 2px 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+}
+
+.empty-spacer {
+    width: 52px;
+}
+
+.circles {
+    display: flex;
+    gap: 8px;
+}
+
+.circle-1 {
+    background-color: lightgreen;
+}
+
+.circle-2 {
+    background-color: lightblue;
+}
+
+.circle-3 {
+    background-color: lightpink;
+}
+
+.circle-buttons {
+    width: 12px;
+    height: 12px;
+    border-radius: 2rem;
+}
+
+/* .washi-tape-header {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
+} */
+
 #page-header {
     text-align: center;
     margin-bottom: 40px;
@@ -80,6 +159,12 @@ body {
     text-align: left;
     align-items: center;
     gap: 10px;
+}
+
+.image-and-desc-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .about-me-quote-and-navis {
