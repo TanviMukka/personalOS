@@ -12,7 +12,7 @@ body {
     z-index: 1;
 }
 
-.top-bar {
+.top-bar, .bottom-bar {
     display: flex;
     border-radius: 32px;
     backdrop-filter: blur(10px); 
@@ -131,6 +131,58 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 2rem;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(860px, calc(100% - 40px));
+    box-sizing: border-box;
+    padding: 8px 16px;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    z-index: 10px;
+}
+
+.desktop-app-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.desktop-app-image.selected {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+.window {
+    position: fixed;
+    top: 120px;
+    left: calc(50% - 200px);
+    width: 400px;
+    min-height: 200px;
+    z-index: 2;
+    background-color: white;
+    border: solid;
+    border-radius: 32px;
+}
+
+.window-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 20px;
+    user-select: none;
+}
+
+.close-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 2rem;
+    background-color: lightpink;
+    cursor: pointer;
 }
 
 /* .washi-tape-header {

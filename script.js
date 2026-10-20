@@ -1,6 +1,7 @@
 var welcomeScreen = document.querySelector("#window")
 var welcomeScreenOpen = document.querySelector("#welcome-open")
 var welcomeScreenClose = document.querySelector("#welcome-close")
+var mainIcon = document.querySelector("#main-menu-app")
 
 function time() {
     var time = new Date().toLocaleString();
@@ -42,17 +43,32 @@ function closeWindow(element) {
     element.style.display = "none"
 }
 
+function toggleWindow(windowElement, icon) {
+    if (windowElement.style.display === "none") {
+        openWindow(windowElement)
+        icon.classList.add("selected")
+    } else {
+        closeWindow(windowElement)
+        icon.classList.remove("selected")
+    }
+}
+
 setInterval(time, 1000);
 
-makeDraggable(
-    document.getElementById("window"), 
-    document.getElementById("window-bar")
-);
+makeDraggable(welcomeScreen, document.getElementById("window-bar"));
+
+mainIcon.classList.add("selected")
 
 welcomeScreenClose.addEventListener("click", function() {
-    closeWindow(welcomeScreen);
+    closeWindow(welcomeScreen)
+    mainIcon.classList.remove("selected")
 });
 
 welcomeScreenOpen.addEventListener("click", function() {
-    openWindow(welcomeScreen);
+    openWindow(welcomeScreen)
+    mainIcon.classList.add("selected")
+});
+
+mainIcon.addEventListener("click", function() {
+    toggleWindow(welcomeScreen, mainIcon)
 });
