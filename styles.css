@@ -35,7 +35,7 @@ body {
     transition: background-color 0.15s;
 }
 
-#welcome-close {
+#welcome-close, #quote-close {
     cursor: pointer;
     transition: transform 0.15s, filter 0.15s;
 }
@@ -66,14 +66,14 @@ body {
     box-sizing: border-box;
 }
 
-.header, .about-me-quote-and-navis, .about-me-desc, .music-desc-and-navis, .coding-languages, .apps, .footer {
-    border: solid; 
+.header, .about-me-desc, .music-desc-and-navis, .coding-languages, .apps, .footer {
+    border: solid;
     border-radius: 32px; 
     margin-bottom: 32px;
     background-color: white;
 }
 
-#window-bar {
+.window-bar {
     position: relative;
     display: flex;
     align-items: center;
@@ -84,7 +84,7 @@ body {
     user-select: none;
 }
 
-#window-bar::before {
+.window-bar::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -93,7 +93,7 @@ body {
         repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.13) 0 10px, transparent 10px 20px);
 }
 
-#window-bar > * {
+.window-bar > * {
     position: relative;
     z-index: 1;
 }
@@ -140,8 +140,8 @@ body {
     width: min(860px, calc(100% - 40px));
     box-sizing: border-box;
     padding: 8px 16px;
-    gap: 12px;
-    justify-content: flex-start;
+    gap: 16px;
+    justify-content: center;
     margin-bottom: 0;
     z-index: 10px;
 }
@@ -218,12 +218,22 @@ body {
     gap: 16px;
 }
 
+#quote-window {
+    width: min(850px, calc(100% - 40px));
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
 .about-me-quote-and-navis {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    text-align: right;
     gap: 10px;
+}
+
+.about-me-quote {
+    flex: 1;
+    text-align: center;
 }
 
 .about-me-desc {

@@ -55,8 +55,6 @@ function toggleWindow(windowElement, icon) {
 
 setInterval(time, 1000);
 
-makeDraggable(welcomeScreen, document.getElementById("window-bar"));
-
 mainIcon.classList.add("selected")
 
 welcomeScreenClose.addEventListener("click", function() {
