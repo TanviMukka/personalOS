@@ -7,11 +7,6 @@ body {
     min-height: 100vh;
 }
 
-#window {
-    position: relative;
-    z-index: 1;
-}
-
 .top-bar, .bottom-bar {
     display: flex;
     border-radius: 32px;
@@ -35,7 +30,7 @@ body {
     transition: background-color 0.15s;
 }
 
-#welcome-close, #quote-close {
+.close-circle{
     cursor: pointer;
     transition: transform 0.15s, filter 0.15s;
 }
@@ -66,7 +61,7 @@ body {
     box-sizing: border-box;
 }
 
-.header, .about-me-desc, .music-desc-and-navis, .coding-languages, .apps, .footer {
+.about-me-desc, .music-desc-and-navis, .coding-languages, .apps, .footer {
     border: solid;
     border-radius: 32px; 
     margin-bottom: 32px;
@@ -143,7 +138,6 @@ body {
     gap: 16px;
     justify-content: center;
     margin-bottom: 0;
-    z-index: 10px;
 }
 
 .desktop-app-image {
@@ -160,29 +154,33 @@ body {
 .window {
     position: fixed;
     top: 120px;
-    left: calc(50% - 200px);
-    width: 400px;
+    left: 0; 
+    right: 0; 
+    margin: 0 auto;
+    width: min(850px, calc(100% - 40px));
     min-height: 200px;
+    max-height: max-content;
+    overflow-y: auto;
     z-index: 2;
     background-color: white;
     border: solid;
     border-radius: 32px;
 }
 
-.window-header {
+/*.window-header {
     display: flex;
     justify-content: flex-end;
     padding: 12px 20px;
     user-select: none;
-}
+}*/
 
-.close-button {
+/*.close-button {
     width: 12px;
     height: 12px;
     border-radius: 2rem;
     background-color: lightpink;
     cursor: pointer;
-}
+}*/
 
 /* .washi-tape-header {
     position: absolute;
@@ -199,7 +197,7 @@ body {
     margin-bottom: 40px;
 }
 
-#navis-image {
+.navis-image {
     height: 300px;
     margin-right: 25px;
     margin-left: 25px;
@@ -218,20 +216,13 @@ body {
     gap: 16px;
 }
 
-#quote-window {
-    width: min(850px, calc(100% - 40px));
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-.about-me-quote-and-navis {
+.quote-content {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.about-me-quote {
+.quote-text {
     flex: 1;
     text-align: center;
 }

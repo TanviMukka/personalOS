@@ -11,25 +11,25 @@
                 <p id="top-bar-time">time</p>
                 <p id="top-bar-quote">trust the process</p>
             </div>
-            <div class="header" id="window">
+            <div class="window" id="welcome-window">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
                     <p class="window-bar-title">navis.exe</p>
                     <div class="circles">
                         <span class="circle-buttons circle-1"></span>
                         <span class="circle-buttons circle-2"></span>
-                        <span class="circle-buttons circle-3" id="welcome-close"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
                     </div>
                 </div>
                 <h1 id="page-header">welcome to tanvi's os</h1>
                 <div class="image-and-desc">
-                    <img src="images/navis.png" alt="image of navis" id="navis-image">
+                    <img src="images/navis.png" alt="image of navis" class="navis-image">
                     <div class="image-and-desc-text">
                         <p id="page-header-desc">i'm navis, your companion in this website<br>
                         this operating system contains a lot of information about tanvi...<br>
                         so i'm here to guide you through it!</p>
                         <p>you can open and close the window by clicking on the highlighted icon in the bar below<br>
-                        you can also close this window by clicking the red circle on the top right corner<br>
+                        you can also close this window by clicking the pink circle on the top right corner<br>
                         hold the washi tape on top of the window to drag the window<br>
                         explore the different apps available by clicking on different apps below</p>
                     </div>
@@ -41,15 +41,33 @@
                 </div>
             </div>
             <div class="bottom-bar">
-                <img src="images/main-menu-app.jpg" class="desktop-app-image" id="main-menu-app">
-                <img src="images/quote-app.png" class="desktop-app-image" id="quote-app">
-                <img src="images/about-me-app.jpg" class="desktop-app-image" id="about-me-app">
-                <img src="images/music-app.png" class="desktop-app-image" id="music-app">
-                <img src="images/coding-app.jpg" class="desktop-app-image" id="coding-app">
-                <img src="images/fav-apps-app.png" class="desktop-app-image" id="fav-apps-app">
-                <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app">
+                <img src="images/main-menu-app.jpg" class="desktop-app-image" id="main-menu-app" alt="app icon of the main menu">
+                <img src="images/quote-app.png" class="desktop-app-image" id="quote-app" alt="app icon of the quote app">
+                <img src="images/about-me-app.jpg" class="desktop-app-image" id="about-me-app" alt="app icon of the about me app">
+                <img src="images/music-app.png" class="desktop-app-image" id="music-app" alt="app icon of the music app">
+                <img src="images/coding-app.jpg" class="desktop-app-image" id="coding-app" alt="app icon of the coding app">
+                <img src="images/fav-apps-app.png" class="desktop-app-image" id="fav-apps-app" alt="app icon of the favorite apps">
+                <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app" alt="app icon of the footer">
             </div>
-            <div class="about-me">
+            <div class="window" id="quote-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">quote.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
+                    </div>
+                </div>
+                <div class="quote-content">
+                    <div class="quote-text">
+                        <h2 id="favorite-quote-header">her favorite quote</h2>
+                        <p id="favorite-quote-text">veni, vidi, vici</p>
+                    </div>
+                    <img src="images/navis_presenting.png" alt="navis with both hands up" class="navis-image">
+                </div>
+            </div>
+            <!--<div class="about-me">
                 <div class="window" id="quote-window">
                     <div class="window-bar">
                         <div class="empty-spacer"></div>
@@ -65,11 +83,11 @@
                             <h2 id="favorite-quote-header">her favorite quote</h2>
                             <p id="favorite-quote-text">veni, vidi, vici</p>
                         </div>
-                        <img src="images/navis_presenting.png" alt="navis with both hands up" id="navis-image">
+                        <img src="images/navis_presenting.png" alt="navis with both hands up" class="navis-image">
                     </div>
                 </div>
                 <div class="about-me-desc">
-                    <img src="images/navis_both_hands_down.png" alt="navis with both hands down" id="navis-image">
+                    <img src="images/navis_both_hands_down.png" alt="navis with both hands down" class="navis-image">
                     <div class="about-me-desc-text">
                         <h2 id="about-me-header">about tanvi</h2>
                         <p id="about-me-text">she's a bit shy so no picture of her today :( but you'll see a lot of me *smirk*<br>
@@ -80,7 +98,6 @@
                     </div>
                 </div>
             </div>
-            <!--
             <div class="music">
                 <div class="music-desc-and-navis">
                     <div class="music-desc">
@@ -107,12 +124,12 @@
                         </ul>
                         <p id="songs-list-ps-note">p.s click on the name of the song to watch the music video</p>
                     </div>
-                    <img src="images/navis_music.png" alt="image of navis with headphones" id="navis-image">
+                    <img src="images/navis_music.png" alt="image of navis with headphones" class="navis-image">
                 </div>
             </div>
             <div class="coding-languages">
                 <div class="coding-languages-desc-and-navis">
-                    <img src="images/navis_laptop.png" alt="image of navis with a laptop" id="navis-image">
+                    <img src="images/navis_laptop.png" alt="image of navis with a laptop" class="navis-image">
                     <div class="coding-languages-desc">
                         <h2 id="coding-languages-header">code code code</h2>
                         <p id="coding-languages-desc">so tanvi recently got into the magical and frustrating world of coding<br>
@@ -166,7 +183,7 @@
                         in the same way, tanvi uses a lot of apps daily, but there's some she can't live without (i totally get how she feels here)<br>
                         so let's look at a few *insert sparkle* amazing apps in her devices</p>
                     </div>
-                    <img src="images/navis_phone.png" alt="image of navis with a phone" id="navis-image">
+                    <img src="images/navis_phone.png" alt="image of navis with a phone" class="navis-image">
                 </div>
                 <ul class="apps-list">
                     <p>notion:<br>
@@ -210,7 +227,7 @@
                 </ul>
             </div>
             <div class="footer">
-                <img src="images/navis.png" alt="image of navis" id="navis-image">
+                <img src="images/navis.png" alt="image of navis" class="navis-image">
                 <div class="footer-desc">
                     <h2 id="footer-header">stay connected!</h2>
                     <p><a href="https://www.linkedin.com/in/tanvi-mukka/" alt="link to tanvi's linkedin">here is a link to tanvi's linkedin profile</a></p>
