@@ -3,6 +3,9 @@ var icons = document.querySelectorAll(".desktop-app-image")
 var closeCircle = document.querySelectorAll(".close-circle")
 var welcomeOpen = document.querySelector("#welcome-open")
 
+var quotes = ["trust the process", "veni, vedi, vici", "change isn't easy", "make yourself proud", "be the exception", "cherish every moment"];
+var quoteText = document.querySelector("#top-bar-quote");
+
 function time() {
     var time = new Date().toLocaleString();
     var timeText = document.querySelector("#top-bar-time");
@@ -60,7 +63,13 @@ function showOnly(windowElement) {
     iconFor(windowElement).classList.add("selected")
 }
 
+time()
 setInterval(time, 1000);
+
+quoteText.style.cursor = "pointer";
+quoteText.addEventListener("click", function () {
+    quoteText.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+})
 
 icons.forEach(function (icon) {
     icon.addEventListener("click", function () {

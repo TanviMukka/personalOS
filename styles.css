@@ -1,10 +1,18 @@
 body {
     background-image: url("images/main_background.jpg"); 
+    background-size: cover;
+    font-family: "DM Mono", monospace;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     min-height: 100vh;
+}
+
+h1, h2, .window-bar-title, #top-bar-time {
+    font-family: "VT323", sans-serif;
+    font-size: 20px;
 }
 
 .top-bar, .bottom-bar {
@@ -70,6 +78,7 @@ body {
     border-radius: 29px 29px 0 0;
     overflow: hidden;
     user-select: none;
+    cursor: grab;
 }
 
 .window-bar::before {
@@ -81,6 +90,10 @@ body {
         repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.13) 0 10px, transparent 10px 20px);
 }
 
+.window-bar:active {
+    cursor: grabbing;
+}
+ 
 .window-bar > * {
     position: relative;
     z-index: 1;
@@ -138,10 +151,27 @@ body {
     height: 64px;
     border-radius: 32px;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.desktop-app-image:hover {
+    transform: translateY(-4px) scale(1.1);
 }
 
 .desktop-app-image.selected {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 600px) {
+    .desktop-app-image {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+    }
+    .bottom-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 }
 
 .window {
