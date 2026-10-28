@@ -61,13 +61,6 @@ body {
     box-sizing: border-box;
 }
 
-.about-me-desc, .music-desc-and-navis, .coding-languages, .apps, .footer {
-    border: solid;
-    border-radius: 32px; 
-    margin-bottom: 32px;
-    background-color: white;
-}
-
 .window-bar {
     position: relative;
     display: flex;
@@ -159,28 +152,13 @@ body {
     margin: 0 auto;
     width: min(850px, calc(100% - 40px));
     min-height: 200px;
-    max-height: max-content;
+    max-height: calc(100vh - 230px);
     overflow-y: auto;
     z-index: 2;
     background-color: white;
     border: solid;
     border-radius: 32px;
 }
-
-/*.window-header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 12px 20px;
-    user-select: none;
-}*/
-
-/*.close-button {
-    width: 12px;
-    height: 12px;
-    border-radius: 2rem;
-    background-color: lightpink;
-    cursor: pointer;
-}*/
 
 /* .washi-tape-header {
     position: absolute;
@@ -227,7 +205,7 @@ body {
     text-align: center;
 }
 
-.about-me-desc {
+.about-content {
     display: flex;
     align-items: center;
     text-align: left;
@@ -235,31 +213,35 @@ body {
     padding-right: 30px;
 }
 
-.music-desc-and-navis {
+.music-content {
     display: flex;
     align-items: center;
     text-align: right;
     gap: 10px;
 }
 
-.coding-languages-desc-and-navis {
+.songs-list {
+    list-style: none;
+}
+
+.coding-text {
     display: flex;
     align-items: center;
     text-align: left;
     gap: 10px;
 }
 
-.coding-languages-logo {
+.coding-logo {
     height: 150px;
 }
 
-.coding-languages-list {
+.coding-list {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.apps-desc {
+.apps-text {
     display: flex;
     text-align: right;
     align-items: center;
@@ -276,7 +258,7 @@ body {
     text-align: right;
 }
 
-.footer {
+.credits-content {
     display: flex;
     text-align: left;
     align-items: center;

@@ -35,19 +35,14 @@
                     </div>
                 </div>
             </div>
-            <div class="window" id="main" style="display: none">
-                <div class="window-header" id="main-header">
-                    <div class="close-button" id="main-close"></div>
-                </div>
-            </div>
             <div class="bottom-bar">
-                <img src="images/main-menu-app.jpg" class="desktop-app-image" id="main-menu-app" alt="app icon of the main menu">
-                <img src="images/quote-app.png" class="desktop-app-image" id="quote-app" alt="app icon of the quote app">
-                <img src="images/about-me-app.jpg" class="desktop-app-image" id="about-me-app" alt="app icon of the about me app">
-                <img src="images/music-app.png" class="desktop-app-image" id="music-app" alt="app icon of the music app">
-                <img src="images/coding-app.jpg" class="desktop-app-image" id="coding-app" alt="app icon of the coding app">
-                <img src="images/fav-apps-app.png" class="desktop-app-image" id="fav-apps-app" alt="app icon of the favorite apps">
-                <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app" alt="app icon of the footer">
+                <img src="images/main-menu-app.jpg" class="desktop-app-image" id="main-menu-app" alt="app icon of the main menu" data-window="welcome-window">
+                <img src="images/quote-app.png" class="desktop-app-image" id="quote-app" alt="app icon of the quote app" data-window="quote-window">
+                <img src="images/about-me-app.jpg" class="desktop-app-image" id="about-me-app" alt="app icon of the about me app" data-window="about-window">
+                <img src="images/music-app.png" class="desktop-app-image" id="music-app" alt="app icon of the music app" data-window="music-window">
+                <img src="images/coding-app.jpg" class="desktop-app-image" id="coding-app" alt="app icon of the coding app" data-window="coding-window">
+                <img src="images/fav-apps-app.png" class="desktop-app-image" id="fav-apps-app" alt="app icon of the favorite apps" data-window="apps-window">
+                <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app" alt="app icon of the footer" data-window="credits-window">
             </div>
             <div class="window" id="quote-window" style="display: none">
                 <div class="window-bar">
@@ -67,40 +62,40 @@
                     <img src="images/navis_presenting.png" alt="navis with both hands up" class="navis-image">
                 </div>
             </div>
-            <!--<div class="about-me">
-                <div class="window" id="quote-window">
-                    <div class="window-bar">
-                        <div class="empty-spacer"></div>
-                        <p class="window-bar-title">navis.exe</p>
-                        <div class="circles">
-                            <span class="circle-buttons circle-1"></span>
-                            <span class="circle-buttons circle-2"></span>
-                            <span class="circle-buttons circle-3" id="quote-close"></span>
-                        </div>
-                    </div>
-                    <div class="about-me-quote-and-navis">
-                        <div class="about-me-quote">
-                            <h2 id="favorite-quote-header">her favorite quote</h2>
-                            <p id="favorite-quote-text">veni, vidi, vici</p>
-                        </div>
-                        <img src="images/navis_presenting.png" alt="navis with both hands up" class="navis-image">
+            <div class="window" id="about-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">about.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
                     </div>
                 </div>
-                <div class="about-me-desc">
-                    <img src="images/navis_both_hands_down.png" alt="navis with both hands down" class="navis-image">
-                    <div class="about-me-desc-text">
+                <div class="about-content">
+                        <img src="images/navis_both_hands_down.png" alt="navis with both hands down" class="navis-image">
+                        <div class="about-text">
                         <h2 id="about-me-header">about tanvi</h2>
                         <p id="about-me-text">she's a bit shy so no picture of her today :( but you'll see a lot of me *smirk*<br>
                         but she gave me permission to share some fun facts about her :D<br><br>
                         she's 16 years old and a senior at high school.<br>
                         she enjoys learning to code, listening to certain songs on repeat, talking long walks, reading fictional books, and watching different kinds of tv shows.<br>
                         she's currently busy trying to keep up with school and college applications, build useful skills, and have a good time everyday.</p>
-                    </div>
+                        </div>
                 </div>
             </div>
-            <div class="music">
-                <div class="music-desc-and-navis">
-                    <div class="music-desc">
+            <div class="window" id="music-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">music.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
+                    </div>
+                </div>
+                <div class="music-content">
+                    <div class="music-text">
                         <h2 id="music-header">music :D</h2>
                         <p id="music-desc">i looove listening to music<br>
                         it feels like a good break from everything going on in life<br><br>
@@ -108,134 +103,158 @@
                         and she listens to this favorite music a lot one week and forgets about it the other *rolls eyes*<br>
                         so here is a list of her current favorite songs curated by spotify's ai</p>
                         <ul class="songs-list">
-                        <a href="https://youtu.be/H1Yt0xJKDY8" alt="link to mariah carey's obsessed music video">obsessed by mariah carey</a>
-                        </ul>
-                        <ul class="songs-list">
-                            <a href="https://youtu.be/Rt9tW3cMLhI" alt="link to olivia rodrigo's stupid song music video">stupid song by olivia rodrigo</a>
-                        </ul>
-                        <ul class="songs-list">
-                            <a href="https://youtu.be/o_1aF54DO60" alt="link to lana del rey's young and beautiful music video">young and beautiful by lana del rey</a>
-                        </ul>
-                        <ul class="songs-list">
-                            <a href="https://youtu.be/t4H_Zoh7G5A" alt="link to jennifer lopez and pitbull's on the floor music video">on the floor by jennifer lopez and pitbull</a>
-                        </ul>
-                        <ul class="songs-list">
-                            <a href="https://youtu.be/sQEgklEwhSo" alt="link to katy perry's harleys in hawaii music video">harlyes in hawaii by katy perry</a>
+                            <li><a href="https://youtu.be/H1Yt0xJKDY8" alt="link to mariah carey's obsessed music video">obsessed by mariah carey</a></li>
+                            <li><a href="https://youtu.be/Rt9tW3cMLhI" alt="link to olivia rodrigo's stupid song music video">stupid song by olivia rodrigo</a></li>
+                            <li><a href="https://youtu.be/o_1aF54DO60" alt="link to lana del rey's young and beautiful music video">young and beautiful by lana del rey</a></li>
+                            <li><a href="https://youtu.be/t4H_Zoh7G5A" alt="link to jennifer lopez and pitbull's on the floor music video">on the floor by jennifer lopez and pitbull</a></li>
+                            <li><a href="https://youtu.be/sQEgklEwhSo" alt="link to katy perry's harleys in hawaii music video">harleys in hawaii by katy perry</a></li>
                         </ul>
                         <p id="songs-list-ps-note">p.s click on the name of the song to watch the music video</p>
                     </div>
                     <img src="images/navis_music.png" alt="image of navis with headphones" class="navis-image">
                 </div>
             </div>
-            <div class="coding-languages">
-                <div class="coding-languages-desc-and-navis">
-                    <img src="images/navis_laptop.png" alt="image of navis with a laptop" class="navis-image">
-                    <div class="coding-languages-desc">
-                        <h2 id="coding-languages-header">code code code</h2>
-                        <p id="coding-languages-desc">so tanvi recently got into the magical and frustrating world of coding<br>
-                        she's still navigating through it and is at a beginner stage in her journey<br>
-                        but today <strong>I</strong> decided to share some progress on her learning (i'm so great)<br>
-                        so here is a list of the coding languages she's <em>explored</em> so far<br>
-                        (it's all gibberish for me but i'll try my best to explain)</p>
+            <div class="window" id="coding-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">coding.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
                     </div>
                 </div>
-                <ul class="coding-languages-list">
-                    <img src="images/python.jpg" alt="python logo" class="coding-languages-logo">
-                    <p>python:<br>
-                    this is the first ever coding language which she learnt (and remembered)<br>
-                    she likes python because of its easy to learn syntax and would definitely recommend this to a beginner<br>
-                    she learnt it by watching videos on youtube, doing mini puzzles, and taking lessons through her school's programming club</p>
-                </ul>
-                <ul class="coding-languages-list">
-                    <img src="images/java.png" alt="java logo" class="coding-languages-logo">
-                    <p>java:<br>
-                    she started learning this a while after python and is currently in a class for it at her school<br>
-                    after a long time of only python, tanvi honestly found java syntax confusing, especially when stuff which aren't really there in python started showing up here<br>
-                    but she's excited to learn a new language!</p>
-                </ul>
-                <ul class="coding-languages-list">
-                    <img src="images/c.jpg" alt="c logo" class="coding-languages-logo">
-                    <p>c:<br>
-                    she tried out a few puzzles in c as part of an online course and never explored too much<br>
-                    after learning java, she found c's and java's syntax to be kind of similar (i don't see it though...)<br>
-                    if it was up to me, i wouldn't even have added this to the list but she did explore and do stuff here so i have to *ugh*</p>
-                </ul>
-                <ul class="coding-languages-list">
-                    <img src="images/js.jpg" alt="javascript logo" class="coding-languages-logo">
-                    <p>javascript:<br>
-                    she learned javascript first through a two week summer program on web development (funn)<br>
-                    the thing she likes about it is how it connects to web deveopment -- something which she didn't experience with the other languages<br>
-                    she's not tooo good at it but definitely knows how to use the little syntax she learnt</p>
-                </ul>
-                <ul class="coding-languages-list">
-                    <img src="images/html_css.jpg" alt="html and css logos" class="coding-languages-logo">
-                    <p>html & css:<br>
-                    i told her these aren't "programming" languages per se but she wanted to include them anyway...<br>
-                    she also learnt these languages in the same summer program she learnt javascript in and she has a LOT of fun with these<br>
-                    she loves trying out different kinds of html tags and goes crazy with all the stylistic things you can do with css</p>
-                </ul>
-            </div>
-            <div class="apps">
-                <div class="apps-desc">
-                    <div class="apps-desc-text">
-                        <h2 id="apps-header">apps tanvi can't live without</h2>
-                        <p id="apps-desc">okay so we all have things we can't live without in our lives. for example, i can't live without my coffee maker because i need coffee coffee coffee<br>
-                        in the same way, tanvi uses a lot of apps daily, but there's some she can't live without (i totally get how she feels here)<br>
-                        so let's look at a few *insert sparkle* amazing apps in her devices</p>
+                <div class="coding-content">
+                    <div class="coding-text">
+                        <img src="images/navis_laptop.png" alt="image of navis with a laptop" class="navis-image">
+                        <div class="coding-desc">
+                            <h2 id="coding-header">code code code</h2>
+                            <p id="coding-desc">so tanvi recently got into the magical and frustrating world of coding<br>
+                            she's still navigating through it and is at a beginner stage in her journey<br>
+                            but today <strong>I</strong> decided to share some progress on her learning (i'm so great)<br>
+                            so here is a list of the coding languages she's <em>explored</em> so far<br>
+                            (it's all gibberish for me but i'll try my best to explain)</p>
+                        </div>
                     </div>
+                    <div class="coding-list">
+                        <img src="images/python.jpg" alt="python logo" class="coding-logo">
+                        <p>python:<br>
+                        this is the first ever coding language which she learnt (and remembered)<br>
+                        she likes python because of its easy to learn syntax and would definitely recommend this to a beginner<br>
+                        she learnt it by watching videos on youtube, doing mini puzzles, and taking lessons through her school's programming club</p>
+                    </div>
+                    <div class="coding-list">
+                        <img src="images/java.png" alt="java logo" class="coding-logo">
+                        <p>java:<br>
+                        she started learning this a while after python and is currently in a class for it at her school<br>
+                        after a long time of only python, tanvi honestly found java syntax confusing, especially when stuff which aren't really there in python started showing up here<br>
+                        but she's excited to learn a new language!</p>
+                    </div>
+                    <div class="coding-list">
+                        <img src="images/c.jpg" alt="c logo" class="coding-logo">
+                        <p>c:<br>
+                        she tried out a few puzzles in c as part of an online course and never explored too much<br>
+                        after learning java, she found c's and java's syntax to be kind of similar (i don't see it though...)<br>
+                        if it was up to me, i wouldn't even have added this to the list but she did explore and do stuff here so i have to *ugh*</p>
+                    </div>
+                    <div class="coding-list">
+                        <img src="images/js.jpg" alt="javascript logo" class="coding-logo">
+                        <p>javascript:<br>
+                        she learned javascript first through a two week summer program on web development (funn)<br>
+                        the thing she likes about it is how it connects to web development -- something which she didn't experience with the other languages<br>
+                        she's not tooo good at it but definitely knows how to use the little syntax she learnt</p>
+                    </div>
+                    <div class="coding-list">
+                        <img src="images/html_css.jpg" alt="html and css logos" class="coding-logo">
+                        <p>html &amp; css:<br>
+                        i told her these aren't "programming" languages per se but she wanted to include them anyway...<br>
+                        she also learnt these languages in the same summer program she learnt javascript in and she has a LOT of fun with these<br>
+                        she loves trying out different kinds of html tags and goes crazy with all the stylistic things you can do with css</p>
+                    </div>
+                </div>
+            </div>
+            <div class="window" id="apps-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">apps.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
+                    </div>
+                </div>
+                <div class="apps-content">
+                    <div class="apps-text">
+                        <div class="apps-desc">
+                            <h2 id="apps-header">apps tanvi can't live without</h2>
+                            <p id="apps-desc">okay so we all have things we can't live without in our lives. for example, i can't live without my coffee maker because i need coffee coffee coffee<br>
+                            in the same way, tanvi uses a lot of apps daily, but there's some she can't live without (i totally get how she feels here)<br>
+                            so let's look at a few *insert sparkle* amazing apps in her devices</p>
+                        </div>
                     <img src="images/navis_phone.png" alt="image of navis with a phone" class="navis-image">
-                </div>
-                <ul class="apps-list">
-                    <p>notion:<br>
-                    this is honestly such a multipurpose app, she and i both looovee it!<br>
-                    you can literally find so many great templates for a plethora of tasks and you can build something from scratch as well :))<br>
-                    she uses it to keep track of her subjects and assignments, notes, outfits, workout plans, and even her watchlist and reading list<br>
-                    it is a bit hard to get started with as there is a lot of information to take in...best thing to do is pick a template and go crazy</p>
-                    <img src="images/notion.jpg" alt="notion logo" class="apps-logo">
-                </ul>
-                <ul class="apps-list">
-                    <p>google calendar:<br>
-                    i think she would not have made it to any of her plans during junior year without google calendar<br>
-                    she uses it mainly to keep track of any events happening throught the week or even later, and also uses it for reminders<br>
-                    the only this actually helps her remember things is that she has a huge widget of it on her phone so she has to look at it everyday<br>
-                    would definitely recommend this app (and the widget method)!!</p>
-                    <img src="images/calendar.jpg" alt="google calendar logo" class="apps-logo">
-                </ul>
-                <ul class="apps-list">
-                    <p>spotify:<br>
-                    when i tell you she loves spotify, i mean she LOVES spotify<br>
-                    she actually can't go even half a day without listening to a song on it *tsk tsk tsk*<br>
-                    listening to the songs there is her way of escaping her surroundings temporarily and also focus on certain tasks<br>
-                    obviously, there are other music apps too but this was the one she first chose a while ago and stuck with it</p>
-                    <img src="images/spotify.jpg" alt="spotify logo" class="apps-logo">
-                </ul>
-                <ul class="apps-list">
-                    <p>notes:<br>
-                    the notes app on the iphone is in collaboration with google calendar for saving her life during junior year <br>
-                    i vividly remember all the bus rides and free periods where she tapped away on her notes about random things<br>
-                    the main reason she used it is that the app was conveniently on her phone whenever she needed it<br>
-                    most of the time she used it to quickly note down the tasks she had to do and organized them at a later time<br></p>
-                    <img src="images/notes.jpg" alt="notes logo" class="apps-logo">
-                </ul>
-                <ul class="apps-list">
-                    <p>brave:<br>
-                    not many people might have heard about this but brave is a browser, just like google chrome or microsoft edge<br>
-                    this looks a lot like google chrome so when she switched to this from chrome, she felt right at home (hey that rhymed!)<br>
-                    the reason she likes this browser is that it blocks any unnecessary cookies or extra advertisements on websites<br>
-                    and the best part? NO COMMERCIALS ON YOUTUBE!! (she got youtube premium for free)</p>
-                    <img src="images/brave.jpg" alt="brave browser logo" class="apps-logo">
-                </ul>
-            </div>
-            <div class="footer">
-                <img src="images/navis.png" alt="image of navis" class="navis-image">
-                <div class="footer-desc">
-                    <h2 id="footer-header">stay connected!</h2>
-                    <p><a href="https://www.linkedin.com/in/tanvi-mukka/" alt="link to tanvi's linkedin">here is a link to tanvi's linkedin profile</a></p>
-                    <p><a href="https://github.com/TanviMukka" alt="link to tanvi's github">here is a link to tanvi's github account</a></p>
-                    <p>this website was built in November 2026 with HTML, CSS, and JS</p>
+                    </div>
+                    <div class="apps-list">
+                        <p>notion:<br>
+                        this is honestly such a multipurpose app, she and i both looovee it!<br>
+                        you can literally find so many great templates for a plethora of tasks and you can build something from scratch as well :))<br>
+                        she uses it to keep track of her subjects and assignments, notes, outfits, workout plans, and even her watchlist and reading list<br>
+                        it is a bit hard to get started with as there is a lot of information to take in...best thing to do is pick a template and go crazy</p>
+                        <img src="images/notion.jpg" alt="notion logo" class="apps-logo">
+                    </div>
+                    <div class="apps-list">
+                        <p>google calendar:<br>
+                        i think she would not have made it to any of her plans during junior year without google calendar<br>
+                        she uses it mainly to keep track of any events happening throughout the week or even later, and also uses it for reminders<br>
+                        the only this actually helps her remember things is that she has a huge widget of it on her phone so she has to look at it everyday<br>
+                        would definitely recommend this app (and the widget method)!!</p>
+                        <img src="images/calendar.jpg" alt="google calendar logo" class="apps-logo">
+                    </div>
+                    <div class="apps-list">
+                        <p>spotify:<br>
+                        when i tell you she loves spotify, i mean she LOVES spotify<br>
+                        she actually can't go even half a day without listening to a song on it *tsk tsk tsk*<br>
+                        listening to the songs there is her way of escaping her surroundings temporarily and also focus on certain tasks<br>
+                        obviously, there are other music apps too but this was the one she first chose a while ago and stuck with it</p>
+                        <img src="images/spotify.jpg" alt="spotify logo" class="apps-logo">
+                    </div>
+                    <div class="apps-list">
+                        <p>notes:<br>
+                        the notes app on the iphone is in collaboration with google calendar for saving her life during junior year <br>
+                        i vividly remember all the bus rides and free periods where she tapped away on her notes about random things<br>
+                        the main reason she used it is that the app was conveniently on her phone whenever she needed it<br>
+                        most of the time she used it to quickly note down the tasks she had to do and organized them at a later time<br></p>
+                        <img src="images/notes.jpg" alt="notes logo" class="apps-logo">
+                    </div>
+                    <div class="apps-list">
+                        <p>brave:<br>
+                        not many people might have heard about this but brave is a browser, just like google chrome or microsoft edge<br>
+                        this looks a lot like google chrome so when she switched to this from chrome, she felt right at home (hey that rhymed!)<br>
+                        the reason she likes this browser is that it blocks any unnecessary cookies or extra advertisements on websites<br>
+                        and the best part? NO COMMERCIALS ON YOUTUBE!! (she got youtube premium for free)</p>
+                        <img src="images/brave.jpg" alt="brave browser logo" class="apps-logo">
+                    </div>
                 </div>
             </div>
-            -->
+            <div class="window" id="credits-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">credits.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
+                    </div>
+                </div>
+                <div class="credits-content">
+                    <img src="images/navis.png" alt="image of navis" class="navis-image">
+                    <div class="credits-text">
+                        <h2 id="credits-header">stay connected!</h2>
+                        <p><a href="https://www.linkedin.com/in/tanvi-mukka/" alt="link to tanvi's linkedin">here is a link to tanvi's linkedin profile</a></p>
+                        <p><a href="https://github.com/TanviMukka" alt="link to tanvi's github">here is a link to tanvi's github account</a></p>
+                        <p>this website was built in November 2026 with HTML, CSS, and JS</p>
+                    </div>
+                </div>
+            </div>
         </main>
         <script src="script.js"></script>
     </body>

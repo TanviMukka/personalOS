@@ -1,7 +1,7 @@
-var welcomeScreen = document.querySelector("#window")
-var welcomeScreenOpen = document.querySelector("#welcome-open")
-var welcomeScreenClose = document.querySelector("#welcome-close")
-var mainIcon = document.querySelector("#main-menu-app")
+var windows = document.querySelectorAll(".window")
+var icons = document.querySelectorAll(".desktop-app-image")
+var closeCircle = document.querySelectorAll(".close-circle")
+var welcomeOpen = document.querySelector("#welcome-open")
 
 function time() {
     var time = new Date().toLocaleString();
@@ -43,30 +43,51 @@ function closeWindow(element) {
     element.style.display = "none"
 }
 
-function toggleWindow(windowElement, icon) {
-    if (windowElement.style.display === "none") {
-        openWindow(windowElement)
-        icon.classList.add("selected")
-    } else {
-        closeWindow(windowElement)
+function iconFor(windowElement) {
+    return document.querySelector(`[data-window="${windowElement.id}"]`)
+}
+
+function showOnly(windowElement) {
+    windows.forEach(function (w) {
+        closeWindow(w)
+    })
+
+    icons.forEach(function (icon) {
         icon.classList.remove("selected")
-    }
+    })
+
+    openWindow(windowElement)
+    iconFor(windowElement).classList.add("selected")
 }
 
 setInterval(time, 1000);
 
-mainIcon.classList.add("selected")
+icons.forEach(function (icon) {
+    icon.addEventListener("click", function () {
+        var target = document.getElementById(icon.dataset.window)
+        if (target.style.display === "none") {
+            showOnly(target)
+        } else {
+            closeWindow(target)
+            icon.classList.remove("selected")
+        }
+    })
+})
 
-welcomeScreenClose.addEventListener("click", function() {
-    closeWindow(welcomeScreen)
-    mainIcon.classList.remove("selected")
-});
+closeCircle.forEach(function (circle) {
+    circle.addEventListener("click", function () {
+        var win = circle.closest(".window")
+        closeWindow(win)
+        iconFor(win).classList.remove("selected")
+    })
+})
 
-welcomeScreenOpen.addEventListener("click", function() {
-    openWindow(welcomeScreen)
-    mainIcon.classList.add("selected")
-});
+windows.forEach (function (w) {
+    makeDraggable(w, w.querySelector(".window-bar"))
+})
 
-mainIcon.addEventListener("click", function() {
-    toggleWindow(welcomeScreen, mainIcon)
-});
+welcomeOpen.addEventListener("click", function () {
+    showOnly(document.getElementById("welcome-window"))
+})
+
+showOnly(document.getElementById("welcome-window"))
