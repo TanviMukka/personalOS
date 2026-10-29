@@ -6,6 +6,9 @@ var welcomeOpen = document.querySelector("#welcome-open")
 var quotes = ["trust the process", "veni, vedi, vici", "change isn't easy", "make yourself proud", "be the exception", "cherish every moment"];
 var quoteText = document.querySelector("#top-bar-quote");
 
+var gradCount = new Date(2027, 4, 16);
+var daysLeft = Math.ceil((gradCount - new Date()) / (1000 * 60 * 60 * 24));
+
 function time() {
     var time = new Date().toLocaleString();
     var timeText = document.querySelector("#top-bar-time");
@@ -70,6 +73,8 @@ quoteText.style.cursor = "pointer";
 quoteText.addEventListener("click", function () {
     quoteText.textContent = quotes[Math.floor(Math.random() * quotes.length)];
 })
+
+document.querySelector("#grad-count").textContent = Math.max(daysLeft, 0);
 
 icons.forEach(function (icon) {
     icon.addEventListener("click", function () {

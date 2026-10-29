@@ -1,6 +1,5 @@
 body {
     background-image: url("images/main_background.jpg"); 
-    background-size: cover;
     font-family: "DM Mono", monospace;
     font-size: 14px;
     margin: 0;
@@ -190,25 +189,9 @@ h1, h2, .window-bar-title, #top-bar-time {
     border-radius: 32px;
 }
 
-/* .washi-tape-header {
-    position: absolute;
-    width: 120px;
-    height: 30px;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: blue;
-} */
-
 #page-header {
     text-align: center;
     margin-bottom: 40px;
-}
-
-.navis-image {
-    height: 300px;
-    margin-right: 25px;
-    margin-left: 25px;
 }
 
 .image-and-desc {
@@ -254,6 +237,26 @@ h1, h2, .window-bar-title, #top-bar-time {
     flex: 1;
     text-align: center;
     padding-bottom: 30px;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 16px;
+    background-color: rgba(218, 177, 218, 0.3);
+    width: fit-content;
+    margin: 16px auto 0;
+}
+
+.countdown-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.countdown-label {
+    font-weight: 500;
 }
 
 .music-content {
