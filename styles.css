@@ -213,7 +213,7 @@ h1, h2, .window-bar-title, #top-bar-time {
 
 .image-and-desc {
     display: flex;
-    text-align: left;
+    text-align: center;
     align-items: center;
     gap: 10px;
 }
@@ -222,6 +222,9 @@ h1, h2, .window-bar-title, #top-bar-time {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 .quote-content {
@@ -241,6 +244,16 @@ h1, h2, .window-bar-title, #top-bar-time {
     text-align: left;
     gap: 10px;
     padding-right: 30px;
+    padding-left: 30px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 .music-content {
@@ -250,31 +263,47 @@ h1, h2, .window-bar-title, #top-bar-time {
     gap: 10px;
 }
 
+.music-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
 .songs-list {
     list-style: none;
 }
 
 .coding-text {
     display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 10px;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 .coding-logo {
     height: 150px;
+    padding-left: 16px;
 }
 
 .coding-list {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-right: 16px;
 }
 
 .apps-text {
     display: flex;
-    text-align: right;
-    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    text-align: center;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .apps-logo {
@@ -286,13 +315,15 @@ h1, h2, .window-bar-title, #top-bar-time {
     align-items: center;
     gap: 10px;
     text-align: right;
+    padding-left: 16px;
 }
 
 .credits-content {
     display: flex;
-    text-align: left;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    text-align: center;
+    padding-right: 30px;
+    padding-left: 30px;
 }
-
-/*https://www.w3.org/Style/Examples/007/fonts.en.html*/
