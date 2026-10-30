@@ -42,6 +42,8 @@
                 <img src="images/main-menu-app.jpg" class="desktop-app-image" id="main-menu-app" alt="app icon of the main menu" data-window="welcome-window">
                 <img src="images/about-me-app.jpg" class="desktop-app-image" id="about-me-app" alt="app icon of the about me app" data-window="about-window">
                 <img src="images/music-app.png" class="desktop-app-image" id="music-app" alt="app icon of the music app" data-window="music-window">
+                <img src="images/books-app.jpg" class="desktop-app-image" id="books-app" alt="app icon of the books app" data-window="books-window">
+                <img src="images/photos-app.jpg" class="desktop-app-image" id="photos-app" alt="app icon of the photos app" data-window="photos-window">
                 <img src="images/coding-app.jpg" class="desktop-app-image" id="coding-app" alt="app icon of the coding app" data-window="coding-window">
                 <img src="images/fav-apps-app.png" class="desktop-app-image" id="fav-apps-app" alt="app icon of the favorite apps" data-window="apps-window">
                 <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app" alt="app icon of the footer" data-window="credits-window">
@@ -114,27 +116,48 @@
                     <div class="books-text">
                         <h2 id="books-header">books!</h2>
                         <p id="books-desc">one of tanvi's favorite things to do is just get lost in the world of fiction<br>
-                        she, unfortunately, went through a HUGE reading slump over the past couple of weeks (even a month or two)<br>
+                        she, unfortunately, went into a HUGE reading slump over the past couple of weeks<br>
                         but, don't worry! she's trying to get back at it by reading some <em>interesting</em> books</p>
                     </div>
                 </div>
-                <div class="book-display">
-                    <img src="images/book-1.png" alt="never-let-me-go-cover" class="book-cover">
-                    <p class="book-name">never let me go</p>
-                    <p class="book-author">by Kazuo Ishiguro</p>
-                    <p class="book-themes">dystopian, sci-fi, identity, mortality, love, nostalgia</p>
+                <div class="book-shelf">
+                    <div class="book-display">
+                        <img src="images/book-1.png" alt="never let me go cover" class="book-cover">
+                        <p class="book-name-and-author"><strong>never let me go</strong><br>
+                        <em>by Kazuo Ishiguro</em></p>
+                        <p class="book-themes">dystopian, sci-fi, identity, mortality, love, nostalgia</p>
+                    </div>
+                    <div class="book-display">
+                        <img src="images/book-2.jpg" alt="nightingale cover" class="book-cover">
+                        <p class="book-details"><strong>nightingale</strong><br>
+                        <em>by Kristin Hannah</em></p>
+                        <p class="book-themes">sisterhood, family bonds, morality, female heroism</p>
+                    </div>
+                    <div class="book-display">
+                        <img src="images/book-3.png" alt="a court of splintered harmony cover" class="book-cover">
+                        <p class="book-details"><strong>a court of splintered harmony</strong><br>
+                        <em>by Sarah J. Maas</em></p>
+                        <p class="book-themes">romance, fantasy, identity, political instability, trauma</p>
+                    </div>
                 </div>
-                <div class="book-display">
-                    <img src="images/book-2.jpg" alt="nightingale-cover" class="book-cover">
-                    <p class="book-name">nightingale</p>
-                    <p class="book-author">by Kristin Hannah</p>
-                    <p class="book-themes">sisterhood, family bonds, morality, female heroism</p>
+            </div>
+            <div class="window" id="photos-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">photos.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span>
+                    </div>
                 </div>
-                <div class="book-display">
-                    <img src="images/book-3.png" alt="acotar-6-cover" class="book-cover">
-                    <p class="book-name">a court of splintered harmony</p>
-                    <p class="book-author">by Sarah J. Maas</p>
-                    <p class="book-themes">romance, fantasy, identity, political instability, trauma</p>
+                <div class="photos-content">
+                    <div class="photos-text">
+                        <h2 class="photos-header">pov: tanvi's gallery</h2>
+                        <p id="photos-desc">whenever tanvi seems something "pretty" when she happens to be outside, she always takes a picture as a memory<br>
+                        she has always <em>fancied</em> photo dumps on instagram and just showing off the pictures to her friends and family<br>
+                        today, she has some of her favorite ones of display just for you! :)</p>
+                    </div>
                 </div>
             </div>
             <div class="window" id="coding-window" style="display: none">
@@ -278,4 +301,4 @@
     </body>
 </html>
 
-<!--more sections to add: books.exe (my current reading list), walks.exe (sky pictures or good nature pictures i took during walks), settings.exe(maybe changing background color or font?)-->
+<!--more sections to add: photos.exe (sky pictures or good nature pictures i took during walks), settings.exe(maybe changing background color or font?)-->

@@ -278,6 +278,46 @@ h1, h2, .window-bar-title, #top-bar-time {
     list-style: none;
 }
 
+.books-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.books-text {
+    flex: 1
+}
+
+.book-shelf {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.book-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.book-cover {
+    height: 300px;
+}
+
+.photos-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#photos-desc {
+    flex: 1;
+    padding: 10px 32px;
+}
+
 .coding-text {
     display: flex;
     flex-direction: column;
