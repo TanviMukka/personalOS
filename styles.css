@@ -1,5 +1,6 @@
 body {
     background-image: url("images/main_background.jpg"); 
+    background-size: cover;
     font-family: "DM Mono", monospace;
     font-size: 14px;
     margin: 0;
@@ -309,6 +310,7 @@ h1, h2, .window-bar-title, #top-bar-time {
 
 .photos-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -316,6 +318,54 @@ h1, h2, .window-bar-title, #top-bar-time {
 #photos-desc {
     flex: 1;
     padding: 10px 32px;
+}
+
+.photos-display {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+}
+
+.photo-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.photo-strip:nth-child(1) { 
+    rotate: -4deg; 
+}
+
+.photo-strip:nth-child(2) { 
+    rotate: 2deg; 
+}
+
+.photo-strip:nth-child(3) { 
+    rotate: -2deg; 
+}
+
+.photo-strip:not(:first-child) {
+    margin-left: -40px;
+}
+
+.photo-strip {
+    transition: rotate 0.2s, scale 0.2s;
+}
+
+.photo-strip:hover {
+    rotate: 0deg;
+    scale: 1.05;
+    z-index: 1;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
 }
 
 .coding-text {
@@ -369,4 +419,45 @@ h1, h2, .window-bar-title, #top-bar-time {
     text-align: center;
     padding-right: 30px;
     padding-left: 30px;
+}
+
+.settings-content {
+    display: flex;
+    text-align: center;
+}
+
+.settings-text {
+    flex: 1;
+}
+
+.settings-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.settings-option {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.option {
+    border: none;
+    border-radius: 16px;
+    padding: 8px 18px;
+    background-color: rgba(218, 177, 218, 0.3);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+body.small-icons .desktop-app-image {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
 }

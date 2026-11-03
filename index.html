@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width", initial-scale="1">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=VT323&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
         <title>Personal OS</title>
     </head>
     <body>
@@ -47,6 +49,7 @@
                 <img src="images/coding-app.jpg" class="desktop-app-image" id="coding-app" alt="app icon of the coding app" data-window="coding-window">
                 <img src="images/fav-apps-app.png" class="desktop-app-image" id="fav-apps-app" alt="app icon of the favorite apps" data-window="apps-window">
                 <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app" alt="app icon of the footer" data-window="credits-window">
+                <img src="images/settings-app.jpg" class="desktop-app-image" id="settings-app" alt="app icon of the settings app" data-window="settings-window">
             </div>
             <div class="window" id="about-window" style="display: none">
                 <div class="window-bar">
@@ -161,6 +164,21 @@
                     <div class="photos-display">
                         <div class="photo-strip">
                             <img src="images/photo-1.JPG" alt="a picture of an artifical waterfall surrounded by different kinds of rocks" class="photo">
+                            <img src="images/photo-2.JPG" alt="a picture of the front of my house after snow" class="photo">
+                            <img src="images/photo-3.JPG" alt="a picture of a park after fall in st. louis" class="photo">
+                            <img src="images/photo-4.JPG" alt="a picture of the sunset from my backyard after a snowy day" class="photo">
+                        </div>
+                        <div class="photo-strip">
+                            <img src="images/photo-5.JPG" alt="a picture of the woods during fall season" class="photo">
+                            <img src="images/photo-6.JPG" alt="a picture of the trees outside my school during fall" class="photo">
+                            <img src="images/photo-7.JPG" alt="a picture of a lake under a bridge with swans" class="photo">
+                            <img src="images/photo-8.JPG" alt="a picture of the sunset sky from backyard" class="photo">
+                        </div>
+                        <div class="photo-strip">
+                            <img src="images/photo-9.png" alt="a picture of the trees and a pond in my neighborhood" class="photo">
+                            <img src="images/photo-10.png" alt="a picture of the beach at cedar point" class="photo">
+                            <img src="images/photo-11.png" alt="a picture of the pink sunset sky from my backyard" class="photo">
+                            <img src="images/photo-12.png" alt="a picture of the sunrise at my school" class="photo">
                         </div>
                     </div>
                 </div>
@@ -301,10 +319,56 @@
                     </div>
                 </div>
             </div>
+            <div class="window" id="settings-window" style="display: none">
+                <div class="window-bar">
+                    <div class="empty-spacer"></div>
+                    <p class="window-bar-title">settings.exe</p>
+                    <div class="circles">
+                        <span class="circle-buttons circle-1"></span>
+                        <span class="circle-buttons circle-2"></span>
+                        <span class="circle-buttons circle-3 close-circle"></span> 
+                    </div>
+                </div>
+                <div class="settings-content">
+                    <div class="settings-text">
+                        <h2 id="settings-header">settings</h2>
+                        <p id="settings-desc">you don't get a lot of options in this system's settings...<br>
+                        but, try to play around with the available options and see what you might discover!</p>
+                        <div class="settings-row">
+                            <span class="settings-label"><strong>wallpaper</strong></span>
+                            <div class="settings-option">
+                                <button class="option wallpaper-option" data-wallpaper="images/main_background.jpg">1</button>
+                                <button class="option wallpaper-option" data-wallpaper="images/background-2.jpg">2</button>
+                                <button class="option wallpaper-option" data-wallpaper="images/background-3.jpg">3</button>
+                                <button class="option wallpaper-option" data-wallpaper="images/background-4.jpg">4</button>
+                            </div>
+                            <span class="settings-label"><strong>fonts</strong></span>
+                            <div class="settings-option">
+                                <button class="option font-option" data-font="'Open Sans', sans-serif" style="font-family: 'Open Sans'">aa</button>
+                                <button class="option font-option" data-font="'DM Mono', monospace" style="font-family: 'DM Mono'">aa</button>
+                                <button class="option font-option" data-font="'Montserrat', arial" style="font-family: 'Montserrat'">aa</button>
+                            </div>
+                            <span class="settings-label"><strong>top bar show/hide</strong></span>
+                            <div class="settings-option">
+                                <label><input type="checkbox" class="bar-toggle" data-target="top-bar-time" checked> clock</label>
+                                <label><input type="checkbox" class="bar-toggle" data-target="top-bar-quote" checked> quote</label>
+                            </div>
+                            <span class="settings-label"><strong>icon size</strong></span>
+                            <div class="settings-option">
+                                <button class="option size-option" data-size="small">small</button>
+                                <button class="option size-option" data-size="large">large</button>
+                            </div>
+                            <span class="settings-label"><strong>reset</strong></span>
+                            <div class="reset-option">
+                                <button class="option" id="reset-settings">reset all</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <script src="script.js"></script>
     </body>
 </html>
 
-<!--more sections to add: photos.exe (sky pictures or good nature pictures i took during walks), settings.exe(maybe changing background color or font?)-->
-<!--got a few photos, need more, scroll through google photos from around the start of sep 2026-->
+<!--create detailed readme + devlogs and make sure all the information is good-->

@@ -76,6 +76,46 @@ quoteText.addEventListener("click", function () {
 
 document.querySelector("#grad-count").textContent = Math.max(daysLeft, 0);
 
+document.querySelectorAll(".wallpaper-option").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        document.body.style.backgroundImage = `url("${btn.dataset.wallpaper}")`;
+    });
+});
+
+document.querySelectorAll(".bar-toggle").forEach(function (box) {
+    box.addEventListener("change", function () {
+        var target = document.getElementById(box.dataset.target);
+        target.style.display = box.checked ? "" : "none";
+    });
+});
+
+document.querySelectorAll(".font-option").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        document.body.style.fontFamily = btn.dataset.font;
+    })
+})
+
+document.querySelectorAll(".size-option").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        document.body.classList.toggle("small-icons", btn.dataset.size === "small");
+    });
+});
+
+document.querySelector("#reset-settings").addEventListener("click", function () {
+    document.body.style.backgroundImage = "";
+    document.body.style.fontFamily = "";
+    document.body.classList.remove("small-icons");
+
+    document.querySelectorAll(".bar-toggle").forEach(function (box) {
+        box.checked = true;
+        document.getElementById(box.dataset.target).style.display = "";
+    });
+
+    document.querySelectorAll(".option").forEach(function (o) {
+        o.classList.remove("active");
+    });
+});
+
 icons.forEach(function (icon) {
     icon.addEventListener("click", function () {
         var target = document.getElementById(icon.dataset.window)
