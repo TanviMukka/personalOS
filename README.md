@@ -8,7 +8,7 @@ Inspired by Hack Club's [Create Your Personal Web-based Operating System](https:
 
 [View Live Project](https://tanvimukka.github.io/personalOS/)
 
-![Screenshot of tanvi's os](images\screenshot.png)
+![Screenshot of tanvi's os](images/screenshot.png)
 
 ### Features
 
