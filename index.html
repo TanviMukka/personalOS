@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- page setup: character encoding, mobile viewport, my stylesheet, then google fonts -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", initial-scale="1">
         <link rel="stylesheet" href="styles.css">
@@ -8,15 +9,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
-        <title>Personal OS</title>
+        <title>tanvi's os</title>
     </head>
     <body>
+        <!-- main container: everything visible on the page lives in here -->
         <main class="page-container">
+            <!-- top bar: os name, clock (filled in by script.js), and quote (click to change it) -->
             <div class="top-bar">
                 <p class="top-bar-header"><span id="welcome-open">tanvi's os</span></p>
                 <p id="top-bar-time">time</p>
                 <p id="top-bar-quote">trust the process</p>
             </div>
+            <!-- welcome window, opens when the page loads -->
+            <!-- every window has the same structure: a title bar with three cirlces (only the pink one closes it) and a content area -->
             <div class="window" id="welcome-window">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -40,6 +45,7 @@
                     </div>
                 </div>
             </div>
+            <!-- bottom bar: one icon per window; each icon's data-window must match the id of the window it opens -->
             <div class="bottom-bar">
                 <img src="images/main-menu-app.jpg" class="desktop-app-image" id="main-menu-app" alt="app icon of the main menu" data-window="welcome-window">
                 <img src="images/about-me-app.jpg" class="desktop-app-image" id="about-me-app" alt="app icon of the about me app" data-window="about-window">
@@ -51,6 +57,8 @@
                 <img src="images/footer-app.jpg" class="desktop-app-image" id="footer-app" alt="app icon of the footer" data-window="credits-window">
                 <img src="images/settings-app.jpg" class="desktop-app-image" id="settings-app" alt="app icon of the settings app" data-window="settings-window">
             </div>
+            <!-- about window -->
+            <!-- every window except the welcome one starts hidden with 'display: none', and script.js shows it when its icon is clicked -->
             <div class="window" id="about-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -69,6 +77,7 @@
                         she's 16 years old and a senior at high school<br>
                         she enjoys learning to code, listening to certain songs on repeat, taking long walks, reading fictional books, and watching different kinds of tv shows<br>
                         she's currently busy trying to keep up with school and college applications, build useful skills, and have a good time everyday</p>
+                        <!-- graduation countdown: the number is filled in by script.js -->
                         <div class="countdown">
                             <span id="grad-count" class="countdown-number">--</span>
                             <span class="countdown-label">days until graduation</span>
@@ -76,6 +85,7 @@
                         </div>
                 </div>
             </div>
+            <!-- music window -->
             <div class="window" id="music-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -96,15 +106,16 @@
                         so here is a list of her current favorite songs curated by spotify's ai</p>
                         <ul class="songs-list">
                             <li><a href="https://youtu.be/H1Yt0xJKDY8" title="link to mariah carey's obsessed music video">obsessed by mariah carey</a></li>
-                            <li><a href="https://youtu.be/Rt9tW3cMLhI" title="link to olivia rodrigo's stupid song music video">stupid song by olivia rodrigo</a></li>
-                            <li><a href="https://youtu.be/o_1aF54DO60" title="link to lana del rey's young and beautiful music video">young and beautiful by lana del rey</a></li>
-                            <li><a href="https://youtu.be/t4H_Zoh7G5A" title="link to jennifer lopez and pitbull's on the floor music video">on the floor by jennifer lopez and pitbull</a></li>
+                            <li><a href="https://youtu.be/3sB4Iv_tM7U" title="link to adéla's nicole kidman music video">nicole kidman by adéla</a></li>
+                            <li><a href="https://youtu.be/s466YCiHfKw" title="link to jennie's fallen angel music video">fallen angel by jennie</a></li>
+                            <li><a href="https://youtu.be/DUT5rEU6pqM" title="link to shakira and wyclef jean's hips don't lie music video">hips don't lie by shakira and wyclef jean</a></li>
                             <li><a href="https://youtu.be/sQEgklEwhSo" title="link to katy perry's harleys in hawaii music video">harleys in hawaii by katy perry</a></li>
                         </ul>
                         <p id="songs-list-ps-note">p.s click on the name of the song to watch the music video</p>
                     </div>
                 </div>
             </div>
+            <!-- books window -->
             <div class="window" id="books-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -123,6 +134,8 @@
                         but, don't worry! she's trying to get back at it by reading some <em>interesting</em> books</p>
                     </div>
                 </div>
+                <!-- three books in a row -->
+                <!-- each book has a cover, a title and author, and its themes -->
                 <div class="book-shelf">
                     <div class="book-display">
                         <img src="images/book-1.png" alt="never let me go cover" class="book-cover">
@@ -144,6 +157,7 @@
                     </div>
                 </div>
             </div>
+            <!-- photos window -->
             <div class="window" id="photos-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -157,10 +171,12 @@
                 <div class="photos-content">
                     <div class="photos-text">
                         <h2 class="photos-header">pov: tanvi's gallery</h2>
-                        <p id="photos-desc">whenever tanvi seems something "pretty" when she happens to be outside, she always takes a picture as a memory<br>
+                        <p id="photos-desc">whenever tanvi sees something "pretty" when she happens to be outside, she always takes a picture as a memory<br>
                         she has always <em>fancied</em> photo dumps on instagram and just showing off the pictures to her friends and family<br>
-                        today, she has some of her favorite nature ones of display just for you! :)</p>
+                        today, she has some of her favorite nature ones on display just for you! :)</p>
                     </div>
+                    <!-- three photo strips with four photos each -->
+                    <!-- the css makes them tilt and overlap -->
                     <div class="photos-display">
                         <div class="photo-strip">
                             <img src="images/photo-1.JPG" alt="a picture of an artifical waterfall surrounded by different kinds of rocks" class="photo">
@@ -183,6 +199,7 @@
                     </div>
                 </div>
             </div>
+            <!-- coding window -->
             <div class="window" id="coding-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -239,6 +256,7 @@
                     </div>
                 </div>
             </div>
+            <!-- apps window -->
             <div class="window" id="apps-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -262,7 +280,7 @@
                         <p>notion:<br>
                         this is honestly such a multipurpose app, she looovees it!<br>
                         you can literally find so many great templates for a plethora of tasks and you can build something from scratch as well :))<br>
-                        she uses it to keep track of her subjects and assignments, notes, outfits, workout plans, and even her watchlist and reading list<br>
+                        she uses it to keep track of her assignments, notes, outfits, workout plans, and even her watchlist and reading list<br>
                         it is a bit hard to get started with as there is a lot of information to take in...best thing to do is pick a template and go crazy</p>
                         <img src="images/notion.jpg" alt="notion logo" class="apps-logo">
                     </div>
@@ -300,6 +318,7 @@
                     </div>
                 </div>
             </div>
+            <!-- credits window -->
             <div class="window" id="credits-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -315,10 +334,11 @@
                         <h2 id="credits-header">stay connected!</h2>
                         <p><a href="https://www.linkedin.com/in/tanvi-mukka/" title="link to tanvi's linkedin">here is a link to tanvi's linkedin profile</a></p>
                         <p><a href="https://github.com/TanviMukka" title="link to tanvi's github">here is a link to tanvi's github account</a></p>
-                        <p>this website was built in October 2026 with HTML, CSS, and JS</p>
+                        <p>this website was built in November 2026 with HTML, CSS, and JS</p>
                     </div>
                 </div>
             </div>
+            <!-- settings window -->
             <div class="window" id="settings-window" style="display: none">
                 <div class="window-bar">
                     <div class="empty-spacer"></div>
@@ -334,6 +354,7 @@
                         <h2 id="settings-header">settings</h2>
                         <p id="settings-desc">you don't get a lot of options in this system's settings...<br>
                         but, try to play around with the available options and see what you might discover!</p>
+                        <!-- each control keeps its value in a data attribute (data-wallpaper, data-font, data-target, data-size), and script.js reads it when the control is used -->
                         <div class="settings-row">
                             <span class="settings-label"><strong>wallpaper</strong></span>
                             <div class="settings-option">
@@ -367,8 +388,7 @@
                 </div>
             </div>
         </main>
+        <!-- the script goes last so every element above already exists when it runs -->
         <script src="script.js"></script>
     </body>
 </html>
-
-<!--create detailed readme + devlogs and make sure all the information is good-->

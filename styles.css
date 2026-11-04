@@ -1,3 +1,4 @@
+/* main wallpaper image, default font, and centering the main container */
 body {
     background-image: url("images/main_background.jpg"); 
     background-size: cover;
@@ -10,11 +11,14 @@ body {
     min-height: 100vh;
 }
 
+/* headings, window titles, and the clock use the pixel font */
+/* since they have their own font, the font switcher in settings only changes the body text */
 h1, h2, .window-bar-title, #top-bar-time {
     font-family: "VT323", sans-serif;
     font-size: 20px;
 }
 
+/* frosted glass look for the top bar and the bottom bar */
 .top-bar, .bottom-bar {
     display: flex;
     border-radius: 32px;
@@ -25,11 +29,13 @@ h1, h2, .window-bar-title, #top-bar-time {
     margin-bottom: 16px;
 }
 
+/* the 'tanvi's os' label, the clock chip, and the quote chip */
 .top-bar-header {
     margin-left: 16px;
     flex: 1;
 }
 
+/* the 'tanvi's os' pill */
 #welcome-open {
     display: inline-block;
     padding: 2px 12px;
@@ -38,11 +44,14 @@ h1, h2, .window-bar-title, #top-bar-time {
     transition: background-color 0.15s;
 }
 
+/* make the cursor pointer on the pink close button */
 .close-circle{
     cursor: pointer;
     transition: transform 0.15s, filter 0.15s;
 }
 
+/* the clock pill
+the text is filled in by script.js */
 #top-bar-time {
     margin: 16px;
     font-weight: 500;
@@ -52,6 +61,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     text-align: center;
 }
 
+/* the quote pill
+'flex: 1' lets it take the leftover space and 'text-align: right' keeps the text on the right edge */
 #top-bar-quote {
     margin-right: 16px; 
     font-weight: 500;
@@ -62,6 +73,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     text-align: right;
 }
 
+/* the main container
+at most 900px wide and centered by the body */
 .page-container {
     width: 100%;
     max-width: 900px;
@@ -69,6 +82,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     box-sizing: border-box;
 }
 
+/* window title bar
+the strip at the top of every window that you drag by */
 .window-bar {
     position: relative;
     display: flex;
@@ -81,6 +96,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     cursor: grab;
 }
 
+/* checkered pattern on the top bar
+two repeating gradients (vertical and horizontal strips) laid over the title bar */
 .window-bar::before {
     content: "";
     position: absolute;
@@ -90,15 +107,18 @@ h1, h2, .window-bar-title, #top-bar-time {
         repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.13) 0 10px, transparent 10px 20px);
 }
 
+/* closed-hand cursor while the title bar is held down */
 .window-bar:active {
     cursor: grabbing;
 }
- 
+
+/* lifts the title, circles, and spacer above the pattern layer */
 .window-bar > * {
     position: relative;
     z-index: 1;
 }
 
+/* white pill behind the window's file name */
 .window-bar-title {
     margin: 0;
     padding: 2px 12px;
@@ -106,10 +126,13 @@ h1, h2, .window-bar-title, #top-bar-time {
     border-radius: 12px;
 }
 
+/* empty block on the left that balances the three circles on the right, so the title stays centered */
 .empty-spacer {
     width: 52px;
 }
 
+/* the three window buttons
+green and blue buttons are only decoration, the pink one closes the window */
 .circles {
     display: flex;
     gap: 8px;
@@ -127,12 +150,15 @@ h1, h2, .window-bar-title, #top-bar-time {
     background-color: lightpink;
 }
 
+/* size and round shape shared by three circles */
 .circle-buttons {
     width: 12px;
     height: 12px;
     border-radius: 2rem;
 }
 
+/* bottom bar
+fixed to the bottom of the screen and centered */
 .bottom-bar {
     position: fixed;
     bottom: 16px;
@@ -146,6 +172,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     margin-bottom: 0;
 }
 
+/* bottom bar icons
+rounded, clickable, and they light slightly on hover */
 .desktop-app-image {
     width: 64px;
     height: 64px;
@@ -154,14 +182,18 @@ h1, h2, .window-bar-title, #top-bar-time {
     transition: transform 0.2s;
 }
 
+
 .desktop-app-image:hover {
     transform: translateY(-4px) scale(1.1);
 }
 
+/* white ring around the icon of the window that is open */
 .desktop-app-image.selected {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
+/* for smaller screens 
+the bottom bar icons get smaller and the bottom bar wraps onto more than one row */
 @media (max-width: 600px) {
     .desktop-app-image {
         width: 48px;
@@ -174,6 +206,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     }
 }
 
+/* every window
+fixed near the top and centered, scorlls when the content inside gets too tall, and sits above the page */
 .window {
     position: fixed;
     top: 120px;
@@ -190,6 +224,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     border-radius: 32px;
 }
 
+/* ~~~~ welcome window ~~~~ */
 #page-header {
     text-align: center;
     margin-bottom: 40px;
@@ -211,17 +246,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     padding-bottom: 30px;
 }
 
-.quote-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.quote-text {
-    flex: 1;
-    text-align: center;
-}
-
+/* ~~~~ about window ~~~~ */
 .about-content {
     display: flex;
     align-items: center;
@@ -240,6 +265,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     padding-bottom: 30px;
 }
 
+/* graduation countdown pill
+the auto side margins center it */
 .countdown {
     display: flex;
     align-items: center;
@@ -260,6 +287,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     font-weight: 500;
 }
 
+/* ~~~~ music window ~~~~ */
 .music-content {
     display: flex;
     align-items: center;
@@ -279,6 +307,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     list-style: none;
 }
 
+/* ~~~~ books window ~~~~ */
 .books-content {
     display: flex;
     align-items: center;
@@ -289,6 +318,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     flex: 1
 }
 
+/* the row of three books
+each .book-display gets an equal area of the width with 'flex: 1' */
 .book-shelf {
     display: flex;
     justify-content: center;
@@ -308,6 +339,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     height: 300px;
 }
 
+/* ~~~~ photos window ~~~~ */
 .photos-content {
     display: flex;
     flex-direction: column;
@@ -320,12 +352,16 @@ h1, h2, .window-bar-title, #top-bar-time {
     padding: 10px 32px;
 }
 
+/* the row of photo strips
+a gap of 0 + a negative margin on the other strips makes them overlap */
 .photos-display {
     display: flex;
     justify-content: center;
     gap: 0px;
 }
 
+/* one photo booth strip
+a white frame with four photos stacked inside in a column */
 .photo-strip {
     display: flex;
     flex-direction: column;
@@ -336,6 +372,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* each strip gets its own tilt
+rotate is used instead of transform so it doesn't clash with the window dragging, which sets transform */
 .photo-strip:nth-child(1) { 
     rotate: -4deg; 
 }
@@ -348,26 +386,31 @@ h1, h2, .window-bar-title, #top-bar-time {
     rotate: -2deg; 
 }
 
+/* pulls every string except the first one to the left so they overlap */
 .photo-strip:not(:first-child) {
     margin-left: -40px;
 }
 
+/* smooth animation for the hover effect below */
 .photo-strip {
     transition: rotate 0.2s, scale 0.2s;
 }
 
+/* on hover, a strip straightens, grows a little, and moves in front of the other strips */
 .photo-strip:hover {
     rotate: 0deg;
     scale: 1.05;
     z-index: 1;
 }
 
+/* each photo is forced into a 200px square */
 .photo {
     width: 200px;
     height: 200px;
     object-fit: fill;
 }
 
+/* ~~~~ coding window ~~~~ */
 .coding-text {
     display: flex;
     flex-direction: column;
@@ -389,6 +432,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     padding-right: 16px;
 }
 
+/* ~~~~ apps window ~~~~ */
 .apps-text {
     display: flex;
     flex-direction: column;
@@ -411,6 +455,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     padding-left: 16px;
 }
 
+/* ~~~~ credits window ~~~~ */
 .credits-content {
     display: flex;
     flex-direction: column;
@@ -421,6 +466,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     padding-left: 30px;
 }
 
+/* ~~~~ settings window ~~~~ */
 .settings-content {
     display: flex;
     text-align: center;
@@ -430,6 +476,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     flex: 1;
 }
 
+/* the settings block
+labels with their buttons stacked in a centered column */
 .settings-row {
     display: flex;
     flex-direction: column;
@@ -438,6 +486,7 @@ h1, h2, .window-bar-title, #top-bar-time {
     margin-bottom: 24px;
 }
 
+/* a row of buttons or checkboxes that wraps onto a new line on narrow screens */
 .settings-option {
     display: flex;
     justify-content: center;
@@ -445,6 +494,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     gap: 12px;
 }
 
+/* pill shaped purple buttons that match the countdown pill 
+font-family: inherit makes buttons use the page font */
 .option {
     border: none;
     border-radius: 16px;
@@ -456,6 +507,8 @@ h1, h2, .window-bar-title, #top-bar-time {
     transition: background-color 0.15s;
 }
 
+/* used by the icon size setting 
+only applies while the body has the small-icons class, which scripts.js adds and removes */
 body.small-icons .desktop-app-image {
     width: 52px;
     height: 52px;
